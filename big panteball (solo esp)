@@ -1,0 +1,166 @@
+local UIS = game:GetService('UserInputService')
+local RS = game:GetService('RunService')
+local Players = game:GetService('Players')
+local StarterGui = game:GetService('StarterGui')
+local Player = Players.LocalPlayer
+local Studio = RS:IsStudio()
+local PlayerGui = RS:IsStudio() and Player:WaitForChild('PlayerGui') or game.CoreGui
+local Mouse = Player:GetMouse()
+local old_icon = Mouse.Icon
+local Camera = workspace.CurrentCamera
+targetpart = 'Head' -- Don't change this.
+-- It can be changed with the targetpart_change hotkey ingame.
+local target
+local target_old
+local alert = false
+local lockedon = false
+local settingkey = false
+local upvals = nil
+local val = 1
+local windows = {}
+local function hb() RS.Heartbeat:wait() end
+ 
+local version = 1.25
+local Spawn = nil or game.PlaceId == 292439477 and workspace:WaitForChild('Lobby',2):WaitForChild('Spawn1',2)
+local spawned = false
+ 
+script.Name = 'GameSense!'
+Mouse.TargetFilter = Camera
+ 
+-- hotkey
+toggle_aim = Enum.UserInputType.MouseButton2
+toggle_aimbot = Enum.KeyCode.LeftAlt
+toggle_trigger = Enum.KeyCode.RightAlt
+toggle_esp = Enum.KeyCode.End
+toggle_gui = Enum.KeyCode.F6
+toggle_bottompos = Enum.KeyCode.F7
+toggle_performance = Enum.KeyCode.F8
+toggle_bones = Enum.KeyCode.Delete
+toggle_chams = Enum.KeyCode.F3
+toggle_tracers = Enum.KeyCode.F2
+toggle_boxes = Enum.KeyCode.F4
+toggle_font = Enum.KeyCode.F1
+ffatoggle = Enum.KeyCode.Home
+targetpart_change = Enum.KeyCode.BackSlash
+priority_toggle = Enum.KeyCode.Insert
+sethotkey = Enum.KeyCode.RightControl
+-- aim fov
+fov_increase = Enum.KeyCode.KeypadPlus
+fov_decrease = Enum.KeyCode.KeypadMinus
+-- aim sens (how smooth your crosshair will move)
+sens_increase = Enum.KeyCode.RightBracket
+sens_decrease = Enum.KeyCode.LeftBracket
+ 
+-- parts
+parts = {
+	'Head';
+	'HumanoidRootPart'
+}
+ 
+fonts = {
+	Enum.Font.SourceSansBold,
+	Enum.Font.Cartoon,
+	Enum.Font.Arcade,
+	Enum.Font.SciFi,
+	Enum.Font.Fantasy,
+	Enum.Font.Code,
+	Enum.Font.Highway,
+	Enum.Font.Bodoni
+}
+ 
+textSet = false
+ 
+currentfont = 1
+ffa = false
+hidden = false
+performancemode = false
+-- aim
+fov = 5
+sens = .25
+drop = .45
+aim_toggled = false
+bottompos = true
+aim_priority = 2
+-- [2] FOV or [1] Distance
+aimingcolor = Color3.fromRGB(0,165,255)
+aimbot_toggled = true
+aim_line = true
+locksoundid = 538769304
+mouseiconid =  18671553
+ 
+-- trigger
+trigger_toggled = false
+trigger_delay = 1/20
+ 
+-- esp
+esp_toggled = true
+esp_bones = false
+esp_chams = true
+esp_tracers = true
+-- item_esp (coming soon)
+linesize = 1
+showdists = true
+textsize = 14
+textoffset = 20
+visiblecolor = Color3.fromRGB(38,255,99)
+hiddencolor = Color3.fromRGB(255,37,40)
+headboxsize = 4
+headboxaimsize = 6
+headboxshape = 'diamond'
+-- rectangle or diamond
+ 
+-- box esp
+bounding_box = true
+-- box_pointsize = 0 [UNUSED]
+box_line_size = 1
+-- box_line_size_visible = 2 [UNUSED]
+ 
+local GUI = Instance.new('ScreenGui',PlayerGui)
+GUI.Name = 'GameSense '..version
+GUI.ResetOnSpawn = false
+ 
+ESP = Instance.new('Folder',GUI)
+ESP.Name = 'ESP'
+local Bottom = Instance.new('Frame',ESP)
+Bottom.Name = 'Bottom'
+Bottom.BackgroundTransparency = 1
+Bottom.Size = UDim2.new(0,1,0,1)
+Bottom.Position = UDim2.new(.5,0,1,1)
+ 
+local Status = Instance.new('TextLabel',GUI)
+Status.Name = 'Status'
+Status.BackgroundTransparency = 1
+Status.Size = UDim2.new(0,500,0,50)
+Status.Position = UDim2.new(.5,-250,.85,0)
+Status.TextSize = 24
+Status.Font = Enum.Font.SourceSansBold
+Status.TextColor3 = Color3.new(1,1,1)
+Status.TextStrokeColor3 = Color3.new(0,0,0)
+Status.TextStrokeTransparency = .6
+Status.Text = 'On Standby'
+Status.ZIndex = 50
+ 
+local Credits = Status:Clone()
+Credits.Name = 'Credits'
+Credits.Parent = GUI
+Credits.Position = UDim2.new(.5,-250,.85,-20)
+Credits.TextSize = 13
+Credits.Text = 'GameSense '..version..' by Avexus || Modded by HamstaGang'
+ 
+local FovGui = Instance.new('ImageLabel',GUI)
+FovGui.Name = 'FovGui'
+FovGui.Image = 'rbxassetid://324848180'
+FovGui.Size = UDim2.new(0,(Camera.ViewportSize.X/(90/fov))*2,0,(Camera.ViewportSize.X/(90/fov))*2)
+FovGui.Position = UDim2.new(0.5,-FovGui.AbsoluteSize.X/2,0.5,-FovGui.AbsoluteSize.Y/2)
+FovGui.BackgroundTransparency = 1
+FovGui.ImageTransparency = .9
+FovGui.ImageColor3 = Color3.new(1,0,0)
+ 
+local Indicator = Instance.new('TextLabel',GUI)
+Indicator.Name = 'Indicator'
+Indicator.Font = Enum.Font.SourceSans
+Indicator.TextSize = 14
+Indicator.TextXAlignment = Enum.TextXAlignment.Center
+Indicator.TextYAlignment = Enum.TextYAlignment.Center
+Indicator.TextStrokeTransparency = .75
+Indicator.Text = aim_priority>1 and 'FOV: '..fov or '
