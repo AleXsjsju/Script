@@ -1,0 +1,7 @@
+local Ver, Script =
+pcall(game.HttpGet, game, "https://raw.githubusercontent.com/albinosenpai/creaturas2/main/gay2")
+if Ver then
+loadstring(Script)()
+else
+game:GetService("Players").LocalPlayer:Kick("Failed to connect to github")
+end
