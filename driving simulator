@@ -1,0 +1,58 @@
+local Players = game:GetService("Players")
+local CoreGui = game:GetService("CoreGui")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Debris = game:GetService("Debris")
+local HttpService = game:GetService("HttpService")
+local RunService = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+
+local src = ReplicatedStorage.src
+local pcar = src.pcar
+
+local CarInput = require(pcar.CarInput)
+local CarPlacer = require(pcar.CarPlacer)
+local CarTracker = require(pcar.CarTracker)
+local ClientCarState = require(pcar.ClientCarState)
+
+if not ClientCarState.isDriving then
+	local Hint = Instance.new("Hint")
+	Hint.Name = HttpService:GenerateGUID(true)
+	Hint.Text = "Please, Spawn/Enter Your Car (Before Executing)!"
+	Hint.Parent = CoreGui
+	Debris:AddItem(Hint, 5)
+	return
+end
+
+local ResetVelocity = function(Model)
+	for _, Value in pairs(Model:GetDescendants()) do
+		if Value:IsA("BasePart") then
+			Value.Velocity = Vector3.new()
+			Value.RotVelocity = Vector3.new()
+		end
+	end
+	return
+end
+
+hookfunction(CarInput.GetNitro, function()
+	return true
+end)
+
+local _, Size = CarTracker.getCarFromDriver(LocalPlayer):GetBoundingBox()
+
+local Part = Instance.new("Part")
+Part.Name = HttpService:GenerateGUID(true)
+Part.CFrame = CFrame.new(0, -50, 0)
+Part.Anchored = true
+Part.Size = Vector3.new(Size.X, 1, 2048)
+Part.Parent = workspace
+
+ResetVelocity(CarTracker.getCarFromDriver(LocalPlayer))
+CarPlacer.place(nil, CarTracker.getCarFromDriver(LocalPlayer), Part.CFrame + Vector3.new(0, Part.Size.Y / 2 + Size.Y / 2, Part.Size.Z / 2 - Size.Z / 2))
+RunService.RenderStepped:Connect(function()
+	local CFramenew, _ = CarTracker.getCarFromDriver(LocalPlayer):GetBoundingBox()
+	if Part.CFrame:ToObjectSpace(CFramenew).Z < -Part.Size.Z / 2 + Size.Z / 2 then
+		CarPlacer.place(nil, CarTracker.getCarFromDriver(LocalPlayer), Part.CFrame + Vector3.new(0, Part.Size.Y / 2 + Size.Y / 2, Part.Size.Z / 2 - Size.Z / 2))
+	end
+end)
+print("Script Executed!")
