@@ -1,4 +1,3 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/JayGitCuh/Lua-Stuff/main/Jay%20Framework/loader.lua', true))()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Bebo-Mods/BeboScripts/main/AnimalSimulator.lua'))()
 wait(0.5)local ba=Instance.new("ScreenGui")
