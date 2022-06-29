@@ -1,0 +1,116 @@
+-- Window/Library 
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Raise A Floppa", colors)
+local colors = {
+    SchemeColor = Color3.fromRGB(0,255,255),
+    Background = Color3.fromRGB(0, 0, 0),
+    Header = Color3.fromRGB(0, 0, 0),
+    TextColor = Color3.fromRGB(255,255,255),
+    ElementColor = Color3.fromRGB(20, 20, 20)
+}
+ 
+-- info
+local info = Window:NewTab("Info")
+local infoSection = info:NewSection("Script Made By Scriptblox")
+local infoSection = info:NewSection("Check on My Pastebin for Updates")
+ 
+-- TeIeport
+local Teleport = Window:NewTab("Teleport")
+local TeleportSection = Teleport:NewSection("Teleport")
+ 
+TeleportSection:NewButton("Go Out", "Teleport Out", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21, 3, -51)
+end)
+ 
+TeleportSection:NewButton("Go Home", "Teleport To inside House", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-57, 8, -39)
+end)
+ 
+TeleportSection:NewButton("Alien Spaceship", "Teleport To Alien House", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(33, -82, 401)
+end)
+ 
+TeleportSection:NewButton("Darkweb", "Teleport To Darkweb", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12602, 63, -16108)
+end)
+ 
+TeleportSection:NewButton("Backroom Door", "Teleport To Backroom Door", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12466, 58, -15986)
+end)
+ 
+TeleportSection:NewButton("Farm", "Teleport To Farm", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-100, 4, -41)
+end)
+ 
+TeleportSection:NewButton("Secret Place", "Teleport To Secret Place", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(35, -63, 404)
+end)
+ 
+TeleportSection:NewButton("Secret Place2", "Teleport To Secret Place2", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12579, 91, -16089)
+end)
+-- Script
+local Script = Window:NewTab("Script")
+local ScriptSection = Script:NewSection("Main Script")
+ 
+ScriptSection:NewToggle("SpeedHack", "Faster Walk", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end
+end)
+ 
+ScriptSection:NewToggle("Anti Afk", "Anti Afk", function(state)
+    if state then
+ 
+    else
+ 
+    end
+end)
+ 
+local ScriptSection = Script:NewSection("Raise a Floppa Script")
+ 
+ScriptSection:NewToggle("Auto Click Floppa", "Auto click Floppa for Auto Money", function(state)
+    if state then
+       fireclickdetector(game:GetService("Workspace").Floppa.ClickDetector)
+       fireclickdetector(game:GetService("Workspace")["Baby Floppa"].ClickDetector)
+    else
+ 
+    end
+end)
+ 
+ScriptSection:NewToggle("Auto Collect Money", "Money Collecter", function(state)
+    if state then
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+wait()
+firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+    else
+ 
+    end
+end)
+ 
+ScriptSection:NewToggle("Auto Feed Floppa", "Auto Feed", function(state)
+    if state then
+ 
+    else
+ 
+    end
+end)
+ 
+ScriptSection:NewToggle("Auto Purchase", "Auto Purchase", function(state)
+    if state then
+ 
+    else
+ 
+    end
+end)
+ 
+ScriptSection:NewToggle("Buy Almond Mlik", "Auto Happiness", function(state)
+    if state then
+ 
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v["Almond Water Pickup"].CFrame
+        else
+ 
+    end
+end)
