@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Strelizia22/Strelizia/main/MS2Main.lua", true))()
