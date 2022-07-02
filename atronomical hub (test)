@@ -1,0 +1,90 @@
+-- Instances:
+ 
+local MainAstro = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Respawn = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local FlyGUI = Instance.new("ScreenGui")
+local FlyModeLabel = Instance.new("TextLabel")
+local Respawn_2 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+ 
+--Properties:
+ 
+MainAstro.Name = "MainAstro"
+MainAstro.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+MainAstro.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ 
+Frame.Parent = MainAstro
+Frame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0984759629, 0, 0.0954274386, 0)
+Frame.Size = UDim2.new(0, 685, 0, 407)
+ 
+UICorner.Parent = Frame
+ 
+Title.Name = "Title"
+Title.Parent = Frame
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.332846701, 0, 0.0245700236, 0)
+Title.Size = UDim2.new(0, 229, 0, 35)
+Title.Font = Enum.Font.SourceSansLight
+Title.Text = "Astronomical"
+Title.TextColor3 = Color3.fromRGB(0, 170, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+ 
+Respawn.Name = "Respawn"
+Respawn.Parent = Frame
+Respawn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Respawn.Position = UDim2.new(0.0131386863, 0, 0.855036855, 0)
+Respawn.Size = UDim2.new(0, 200, 0, 50)
+Respawn.Font = Enum.Font.TitilliumWeb
+Respawn.Text = "Respawn"
+Respawn.TextColor3 = Color3.fromRGB(255, 255, 255)
+Respawn.TextScaled = true
+Respawn.TextSize = 14.000
+Respawn.TextWrapped = true
+ 
+UICorner_2.Parent = Respawn
+ 
+FlyGUI.Name = "FlyGUI"
+FlyGUI.Parent = Frame
+ 
+FlyModeLabel.Name = "FlyModeLabel"
+FlyModeLabel.Parent = FlyGUI
+FlyModeLabel.BackgroundTransparency = 1.000
+FlyModeLabel.Size = UDim2.new(1, 0, 0, 20)
+FlyModeLabel.Font = Enum.Font.ArialBold
+FlyModeLabel.Text = "Fly"
+FlyModeLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+FlyModeLabel.TextSize = 25.000
+FlyModeLabel.TextStrokeTransparency = 0.000
+FlyModeLabel.TextWrapped = true
+ 
+Respawn_2.Name = "Respawn"
+Respawn_2.Parent = Frame
+Respawn_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Respawn_2.Position = UDim2.new(0.332846701, 0, 0.855036855, 0)
+Respawn_2.Size = UDim2.new(0, 200, 0, 50)
+Respawn_2.Font = Enum.Font.TitilliumWeb
+Respawn_2.Text = "combo is eboy"
+Respawn_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Respawn_2.TextScaled = true
+Respawn_2.TextSize = 14.000
+Respawn_2.TextWrapped = true
+ 
+UICorner_3.Parent = Respawn_2
+ 
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+ScrollingFrame.Position = UDim2.new(1, 0, 0, 0)
+ScrollingFrame.Size = UDim2.new(0, 206, 0, 407)
+ScrollingFrame.ScrollBarThickness = 5
