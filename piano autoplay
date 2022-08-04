@@ -1,5 +1,5 @@
-shared.stop = true -- stops the player at any time if true
-shared.tempo = 70 -- average
+shared.stop = true 
+shared.tempo = 70 
 
 shared.scr = [[
 -- insert song (use https://virtualpiano.net)
