@@ -23,4 +23,4 @@ end})
 w1:AddBind({text = "Toggle UI", key = "RightControl", callback = function()
 Library:Close()
 end})
-Library:Init().
+Library:Init()
