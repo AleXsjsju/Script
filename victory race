@@ -1,1 +1,26 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/V25JdGMd"))()
+for i,v in pairs(game.CoreGui:GetChildren()) do
+if v.Name == "ScreenGui" then
+v:Destroy()
+end
+end
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/sannin9000/Ui-Libraries/main/uwuware", true))()
+local Window = Library:CreateWindow"Main"
+local w1 = Library:CreateWindow"Misc"
+Window:AddToggle({text = "Winning", flag = "toggle", state = false, callback = function(a)
+aa = a
+while aa do task.wait(0.01)
+   pcall(function()
+       for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+           if v:IsA("TouchTransmitter") and v.Parent.Name == "Win" then
+               firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+               firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+            end
+         end
+game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
+      end)
+   end
+end})
+w1:AddBind({text = "Toggle UI", key = "RightControl", callback = function()
+Library:Close()
+end})
+Library:Init().
