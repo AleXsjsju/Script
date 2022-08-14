@@ -1,0 +1,1 @@
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/skatbr/Roblox-Releases/main/Base%20Battles.lua"),true))()
