@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Nounours14/Exploits/main/AutofarmCollapse.lua"))()
