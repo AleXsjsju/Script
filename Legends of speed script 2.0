@@ -1,0 +1,1 @@
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/lux933/Arch/main/Utilities/loader.lua"))()
