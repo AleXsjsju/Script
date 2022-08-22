@@ -1,12 +1,3 @@
-while task.wait() do
-   for i,v in pairs(workspace.Environment:GetDescendants()) do
-       if v:FindFirstChildWhichIsA'TouchTransmitter' then
-           firetouchinterest(v, game:service'Players'.LocalPlayer.Character.HumanoidRootPart, 0)
-           task.wait((v.Parent.Name == 'Stage1K' and 1) or .1)
-       end
-   end
-end
-
 wait(0.5)local ba=Instance.new("ScreenGui")
 local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
 local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
@@ -26,3 +17,29 @@ ab.TextColor3=Color3.new(1,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
 game:service'Players'.LocalPlayer.Idled:connect(function()
 bb:CaptureController()bb:ClickButton2(Vector2.new())
 ab.Text="You went idle and ROBLOX tried to kick you but we reflected it!"wait(2)ab.Text="Script Re-Enabled"end)
+
+bruh = nil
+for i,v in pairs(getgc()) do
+   if type(v) == 'function' then
+       if debug.getinfo(v).name == "Click" then
+           bruh = v
+       end
+   end
+end
+task.wait(1)
+while task.wait() do
+for i = 1,1000 do
+bruh(UDim2.new(0,0,0),1)
+end
+end
+
+
+while task.wait() do
+   for i,v in pairs(workspace.Environment:GetDescendants()) do
+       if v:FindFirstChildWhichIsA'TouchTransmitter' then
+           firetouchinterest(v, game:service'Players'.LocalPlayer.Character.HumanoidRootPart, 0)
+           task.wait((v.Parent.Name == 'Stage1K' and 1) or .1)
+       end
+   end
+end
+
