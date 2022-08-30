@@ -2,7 +2,6 @@ while true do
    wait(0.5)
 spawn(function()
 local args = {
-   [1] = "/w count",
    [2] = "All"
 }
 
