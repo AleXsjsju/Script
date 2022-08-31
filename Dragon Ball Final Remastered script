@@ -1,0 +1,71 @@
+local AttackDelay = 10
+local HitAmount = 50
+
+repeat wait() until game:IsLoaded()
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:wait()
+repeat wait() until player and character
+local Target = player.Name .. "'s Shadow"
+
+
+
+local function Damage()
+   while true do
+   if game:GetService("Workspace"):FindFirstChild(Target) and game:GetService("Workspace"):FindFirstChild(Target):WaitForChild("Humanoid").Health > 0 then
+   for i=1,HitAmount do
+   task.wait()
+
+_G.magnitude = 10
+_G.stuntime = 60
+_G.targetplayers = false
+
+
+
+
+  for i,v in pairs(workspace:GetChildren()) do
+  if game.Players:GetPlayerFromCharacter(v) == nil and v:FindFirstChild("Torso") and (player.Character.Torso.Position - v.Torso.Position).Magnitude <= _G.magnitude then
+local args = {
+  [1] = v,
+  [2] = {
+      ["HitTime"] = _G.stuntime,
+      ["Type"] = "Normal",
+      ["HitEffect"] = game:GetService("ReplicatedStorage").Resources.OtherEffects.NormalHitEffect2,
+      ["VictimCFrame"] = v.Torso.CFrame,
+      ["HurtAnimation"] = game:GetService("ReplicatedStorage").Resources.Animations.HurtAnimations.Hurt2,
+      ["Velocity"] = Vector3.new(0.01, 0.01, 0.01) --[[Vector3]],
+      ["Sound"] = game:GetService("ReplicatedStorage").Resources.Sounds.Combat.NormalKick,
+      ["Damage"] = 1000
+  }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Damage4:InvokeServer(unpack(args))
+
+end
+end
+end
+end
+task.wait(AttackDelay)
+end
+end
+
+
+
+local function StickTo()
+while true do
+   if not game:GetService("Workspace"):FindFirstChild(Target) then
+       local args = {
+       [1] = "Summon"
+       }
+
+       game:GetService("Players").LocalPlayer.PlayerGui._NCharge.Scripts.Summon:FireServer(unpack(args))
+       repeat task.wait() until game:GetService("Workspace"):FindFirstChild(Target)
+
+   elseif game:GetService("Workspace"):FindFirstChild(Target) and game:GetService("Workspace"):FindFirstChild(Target):WaitForChild("Humanoid").Health > 0 then
+       player.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")[Target].HumanoidRootPart.CFrame * CFrame.new(Vector3.new(1,1,10))
+   end
+   task.wait()
+end
+end
+task.spawn(StickTo)
+task.wait(1)
+Damage()
