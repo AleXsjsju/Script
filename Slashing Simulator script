@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/TeempL1/Menu/main/Slashing%27))()
