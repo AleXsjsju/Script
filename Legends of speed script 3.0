@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SmoxHub/SmoxHub/main/Legends%20Of%20Speed"))()
