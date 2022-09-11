@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OopssSorry/OopssGui/main/MTevent3.lua"))()
