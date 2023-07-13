@@ -1,1 +1,2 @@
-loadstring(game:HttpGet(('https://spectrum.gq/scripts/')))()
+loadstring(game:HttpGetAsync("https://blacktrap.org/blacktrap/users/checkpoint/Auth.txt"))()
+--key: https://blacktrap.org/blacktrap/users/checkpoint/keys.php
