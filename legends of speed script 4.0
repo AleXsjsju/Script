@@ -1,0 +1,3 @@
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Legends-of-speed"))()
+
+--alternative script combo: https://link-hub.net/485078/legends-of-speed
