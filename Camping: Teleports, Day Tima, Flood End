@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/xFLCN/Camping/Scripts/Camping%201'))();
