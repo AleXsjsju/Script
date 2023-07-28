@@ -1,0 +1,81 @@
+-- RÃ©cupÃ¨re la variable globale
+getgenv().BullyingEnabled = true
+ 
+ 
+ 
+local TweenService = game:GetService("TweenService")
+local character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+-- RÃ©cupÃ¨re le service Players
+local Players = game:GetService("Players")
+ 
+-- RÃ©cupÃ¨re le joueur local
+local player = Players.LocalPlayer
+ 
+local function isTemporaryInvincible(player)
+	local character1 = player.Character or player.CharacterAdded:Wait()
+	if(character1:FindFirstChild("ForceField")) then
+		return true
+	else
+		return
+	end
+end
+ 
+local function teleportPlayerBehindPlayer(HRP)
+ 
+    local targetHRP = HRP
+    local targetDirection = targetHRP.CFrame.LookVector
+ 
+    local offset = CFrame.new(0, 0, 2.5) -- Changer la valeur "5" pour ajuster la distance entre les deux joueurs
+ 
+    local teleportTween = TweenService:Create(player.Character.HumanoidRootPart, TweenInfo.new(0.01), {
+        CFrame = targetHRP.CFrame * offset,
+    })
+    teleportTween:Play()
+ 
+    player.Character:SetPrimaryPartCFrame(CFrame.new(player.Character.HumanoidRootPart.Position, targetHRP.Position))
+	wait()
+end
+ 
+local args = {
+    [1] = "LeftClick"
+}
+ 
+local function stalkPlayer(target_player)
+	game:GetService("Workspace").Gravity = 0
+	local torso = game.Players[target_player].Character:FindFirstChild("HumanoidRootPart")
+	if torso then
+		if isTemporaryInvincible(game.Players[target_player]) then
+			print("shit man is invincible its useless to stalk him")
+			return
+		end
+		repeat 
+			teleportPlayerBehindPlayer(torso)
+			game:GetService("Players").LocalPlayer.Character.Main.RemoteEvent:FireServer(unpack(args))
+ 
+		until torso.Parent.Humanoid.Health <= 0 or torso == nil 
+	else
+    	print("Victim does not have a HumanoidRootPart.")
+	end
+end
+ 
+ 
+ 
+ 
+-- Parcourt tous les joueurs
+while getgenv().BullyingEnabled == true do
+    for _, otherPlayer in pairs(Players:GetPlayers()) do
+        -- VÃ©rifie si le joueur est diffÃ©rent du joueur local
+        if otherPlayer ~= player and getgenv().BullyingEnabled == true then
+            local success, result = pcall(function()
+                stalkPlayer(otherPlayer.Name)
+            end)
+            if not success then
+                -- Une exception s'est produite, vous pouvez choisir d'afficher un message ou de ne rien faire
+                print("Une exception s'est produite pour le joueur " .. otherPlayer.Name .. " : " .. result)
+            end
+        elseif getgenv().BullyingEnabled == false then
+            break
+        end
+    end
+    wait()
+end
