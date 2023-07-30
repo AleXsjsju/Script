@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLEduard/Eduard-s-Hub-V2-UI-Revamp-/main/loadstring",true))()
