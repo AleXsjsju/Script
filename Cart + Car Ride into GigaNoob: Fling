@@ -1,0 +1,11 @@
+AMOUNT = 5000
+TICK = tick()
+for p=0,AMOUNT do
+	for i,v in pairs(workspace.Building.Baseplate["Carts + Jeeps"]:GetChildren()) do
+		if v.Name ~= "Cart" then continue end
+		for i,v in pairs(v:GetChildren()) do
+			if v.Name ~= "Cart" then continue end
+			fireclickdetector(v.Up.ClickDetector)
+		end
+	end
+end
