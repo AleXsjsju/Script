@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WinterDinder/Roblox-But-Every-Second-You-Get-1-Jump-Power/main/Main", true))()
