@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astronomic8/Astro/main/AstroLoader.lua"))()
