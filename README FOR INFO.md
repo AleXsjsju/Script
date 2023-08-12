@@ -6,6 +6,7 @@ Let's Get Started Now!
 -The scripts that I disclose are for informational purposes only so I do not take responsibility for bans or any other consequences
 
 -I am not the creator of the scripts I publish (except mine: https://link-target.net/485078/keysystem)
+
 -Script keys are not created or managed by me, they are managed by script creators (Hub). 
 
 -I don't take responsibility if the key stops working. Often the key is obtained via linkvertise links or via the discord server. 
