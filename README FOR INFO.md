@@ -13,5 +13,5 @@ Let's Get Started Now!
 Follow me on YouTube to get more scripts every day^^
 
 ⚙️Reminder⚙️
-This Channel(youtube) Does Not Promotes Any illegal content,all contents provided by This Channel is meant for EDUCATIONAL PURPOSE only.
+This Channel(https://www.youtube.com/@alexsjsju) Does Not Promotes Any illegal content,all contents provided by This Channel is meant for EDUCATIONAL PURPOSE only.
 This video does NOT infringe and violate any policies such as spam, deceptive practices and scams. This video is not hacking-related as I'm trying to show them an exploit/glitch for the game. Also, I do not infringe any kind of copyright.
