@@ -11,7 +11,9 @@ Let's Get Started Now!
 
 -I don't take responsibility if the key stops working. Often the key is obtained via linkvertise links or via the discord server. 
 
--I do not take responsibility for where the links inside the scripts lead (often there are no problems)-IF A SCRIPT STOPS WORKING IT IS NOT MY FAULT. IT MAY HAVE BEEN CORRECTED BY THE MAP AND MADE UNUSABLE OR THE CREATOR OF THE SCRIPT COULD HAVE CHANGED THE SOURCE CODE OF THE SCRIPT
+-I do not take responsibility for where the links inside the scripts lead (often there are no problems)
+
+-IF A SCRIPT STOPS WORKING IT IS NOT MY FAULT. IT MAY HAVE BEEN CORRECTED BY THE MAP AND MADE UNUSABLE OR THE CREATOR OF THE SCRIPT COULD HAVE CHANGED THE SOURCE CODE OF THE SCRIPT
 
 
 Follow me on YouTube to get more scripts every day^^
