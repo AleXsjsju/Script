@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/bruddaa/starvingartists/main/Auto%20Draw%20GUI.lua'))()
