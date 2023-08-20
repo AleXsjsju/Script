@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kenniel123/Worm-2048-/main/Worm%202048%20Updated",true))();
