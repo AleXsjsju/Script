@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SiusGIF/Siloxware-Lite/main/SourceCodeLite"))()
