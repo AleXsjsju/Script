@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/Cracks/main/Lightux/V1.5/BYPASS.lua",true))()
