@@ -1,0 +1,2 @@
+-- Chat Bypass Script | Comma to toggle On/Off
+loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/bf25bbe25e48f261c259c0dea213156c/raw/940b09fabf77cee3894653f84ab46258e2e5f0f3/Chat-BypassScript",true))()
