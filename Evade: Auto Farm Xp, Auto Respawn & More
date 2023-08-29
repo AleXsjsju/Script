@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Jimmper/Robloxscripts/main/obf_ijyV31z27684kpX3UZru9jXcm6UcjCbQyA8el5xmOsYPJ1wwwym70XBni5NRkAAu.lua'))()
