@@ -1,1 +1,1 @@
-Murder Mystery 2: God Mode, Kill Aura, Silent Aim
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KidichiHB/Kidachi/main/Scripts/MM2_V2"))()
