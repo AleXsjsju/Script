@@ -1,8 +1,6 @@
 getgenv().ScriptConfig = {
-    -- Distance in stud before the automatic triggers,
-    -- you may change even after you have ran the script if you desire!
-    -- Just be sure to REMOVE the loadstring, or else you will face some... issues
-DistanceBeforeParry = 60,
+        -- You can easily change the distance, but remember that if you are too close to a player you might notice that you use hacks, and above all you can still die
+DistanceBeforeParry = 45,
 }
 
 
