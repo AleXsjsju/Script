@@ -1,0 +1,9 @@
+-- // Jayden's Hub loader // --
+
+-- _G.JH_LANGUAGE_SELECTED = "es";
+
+getgenv().JH_FAST_LOAD = true; -- Loads jayden's hub instantly.
+getgenv().JH_TOGGLE_BUTTON = false; -- Set this to true if you are on mobile, set to false if you're on pc
+getgenv().JH_TOGGLE_KEYBIND = "LeftControl" -- Sets the toggle keybind to control keys.
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Jxys3rrV/jaydens-hub/main/script'))();
