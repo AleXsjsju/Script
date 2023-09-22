@@ -1,0 +1,1 @@
+ loadstring(game:HttpGet('https://raw.githubusercontent.com/No6No6No7yt/Lumin-Hub/main/Every%20Second%20You%20Get%20%2B1%20Jump%20Power'))(); 
