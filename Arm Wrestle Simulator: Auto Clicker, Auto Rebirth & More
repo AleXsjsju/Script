@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Alech01/Arm-Wrestle-Simulator/main/OP%20Arm%20Wrestle%20Simulator%20SCRIPT"))()
