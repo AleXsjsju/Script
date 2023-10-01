@@ -1,0 +1,1 @@
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Alech01/Push-Simulator-By-SOuly/main/Push%20Simulator%20By%20Souly')))()
