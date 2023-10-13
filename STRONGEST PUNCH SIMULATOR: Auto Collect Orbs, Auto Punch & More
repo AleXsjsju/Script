@@ -1,1 +1,1 @@
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ExtremeAntonis/loader/main/loader.lua"))()
