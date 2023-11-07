@@ -1,0 +1,1 @@
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SadlekAski/Scripts/main/Backroom%20Tower%20Defense/Main%20Gui.lua'))()
